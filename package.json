@@ -12,6 +12,7 @@
     "bulma": "^0.7.2",
     "highcharts": "^7.0.1",
     "vue": "^2.5.21",
+    "vue-analytics": "^5.16.1",
     "vue-headful": "^2.0.1",
     "vue-router": "^3.0.1",
     "vue2-highcharts": "^1.2.5",
