@@ -10,12 +10,12 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <HarvardProfile/>
-        <HarvardEmployment/>
+        <SloanProfile/>
+        <SloanEmployment/>
       </div>
       <div class="columns">
-        <HarvardIndustry/>
-        <HarvardIndustryPercent/>
+        <SloanIndustry/>
+        <SloanIndustryPercent/>
       </div>
     </div>
 
@@ -28,20 +28,20 @@
 import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
 import Selector from "@/components/Selector.vue";
-import HarvardIndustry from "@/components/harvard/HarvardIndustry.vue";
-import HarvardProfile from "@/components/harvard/HarvardProfile.vue";
-import HarvardEmployment from "@/components/harvard/HarvardEmployment.vue";
-import HarvardIndustryPercent from "@/components/harvard/HarvardIndustryPercent.vue";
+import SloanIndustry from "@/components/sloan/SloanIndustry.vue";
+import SloanProfile from "@/components/sloan/SloanProfile.vue";
+import SloanEmployment from "@/components/sloan/SloanEmployment.vue";
+import SloanIndustryPercent from "@/components/sloan/SloanIndustryPercent.vue";
 
 export default {
   components: {
     NavBar,
     Footer,
     Selector,
-    HarvardIndustry,
-    HarvardProfile,
-    HarvardEmployment,
-    HarvardIndustryPercent
+    SloanIndustry,
+    SloanProfile,
+    SloanEmployment,
+    SloanIndustryPercent
   }
 };
 </script>
