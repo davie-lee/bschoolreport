@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import Harvard from "./views/Harvard.vue";
 import Wharton from "./views/Wharton.vue";
 import Stanford from "./views/Stanford.vue";
 import Sloan from "./views/Sloan.vue";
@@ -15,8 +15,8 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
+      name: "harvard",
+      component: Harvard
     },
     {
       path: "/wharton",

@@ -1,12 +1,5 @@
 <template>
   <div>
-    <section class="hero is-white has-text-center">
-      <NavBar/>
-    </section>
-
-    <!-- School Menu -->
-    <Selector/>
-
     <!-- Charts -->
     <div class="container">
       <div class="columns">
@@ -18,16 +11,10 @@
         <HarvardIndustryPercent/>
       </div>
     </div>
-
-    <!-- Footer -->
-    <Footer/>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Footer from "@/components/Footer.vue";
-import Selector from "@/components/Selector.vue";
 import HarvardIndustry from "@/components/harvard/HarvardIndustry.vue";
 import HarvardProfile from "@/components/harvard/HarvardProfile.vue";
 import HarvardEmployment from "@/components/harvard/HarvardEmployment.vue";
@@ -35,9 +22,6 @@ import HarvardIndustryPercent from "@/components/harvard/HarvardIndustryPercent.
 
 export default {
   components: {
-    NavBar,
-    Footer,
-    Selector,
     HarvardIndustry,
     HarvardProfile,
     HarvardEmployment,
