@@ -3,32 +3,29 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <HarvardProfile/>
-        <HarvardEmployment/>
+        <Profile collegeref="harvard"/>
+        <Employment collegeref="harvard" />
       </div>
       <div class="columns">
-        <HarvardIndustry/>
-        <HarvardIndustryPercent/>
+        <Industry collegeref="harvard"/>
+        <IndustryPercent collegeref="harvard"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import HarvardIndustry from "@/components/harvard/HarvardIndustry.vue";
-import HarvardProfile from "@/components/harvard/HarvardProfile.vue";
-import HarvardEmployment from "@/components/harvard/HarvardEmployment.vue";
-import HarvardIndustryPercent from "@/components/harvard/HarvardIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    HarvardIndustry,
-    HarvardProfile,
-    HarvardEmployment,
-    HarvardIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

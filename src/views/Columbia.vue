@@ -3,31 +3,28 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <ColumbiaProfile/>
-        <ColumbiaIndustry/>
+        <Profile collegeref="columbia"/>
+        <Industry collegeref="columbia"/>
       </div>
       <div class="columns">
-        <ColumbiaIndustryPercent/>
+        <IndustryPercent collegeref="columbia"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ColumbiaIndustry from "@/components/columbia/ColumbiaIndustry.vue";
-import ColumbiaProfile from "@/components/columbia/ColumbiaProfile.vue";
-//import ColumbiaEmployment from "@/components/columbia/ColumbiaEmployment.vue";
-import ColumbiaIndustryPercent from "@/components/columbia/ColumbiaIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+// import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    ColumbiaIndustry,
-    ColumbiaProfile,
-    //ColumbiaEmployment,
-    ColumbiaIndustryPercent
+  //  Employment,
+    Industry,
+    IndustryPercent,
+    Profile
   }
 };
 </script>
-
-<style>
-</style>

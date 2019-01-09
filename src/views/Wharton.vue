@@ -1,34 +1,31 @@
 <template>
   <div>
     <!-- Charts -->
-    <div class="container">
+        <div class="container">
       <div class="columns">
-        <WhartonProfile/>
-        <Employment collegeref="wharton"/>
+        <Profile collegeref="wharton"/>
+        <Employment collegeref="wharton" />
       </div>
       <div class="columns">
-        <WhartonIndustry/>
-        <WhartonIndustryPercent/>
+        <Industry collegeref="wharton"/>
+        <IndustryPercent collegeref="wharton"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import WhartonIndustry from "@/components/wharton/WhartonIndustry.vue";
-import WhartonProfile from "@/components/wharton/WhartonProfile.vue";
-import Employment from "../components/charts/Employment.vue";
-import WhartonIndustryPercent from "@/components/wharton/WhartonIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    WhartonIndustry,
-    WhartonProfile,
     Employment,
-    WhartonIndustryPercent
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

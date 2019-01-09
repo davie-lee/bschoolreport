@@ -3,12 +3,12 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <BoothProfile/>
-        <BoothEmployment/>
+        <Profile collegeref="booth"/>
+        <Employment collegeref="booth" />
       </div>
       <div class="columns">
-        <BoothIndustry/>
-        <BoothIndustryPercent/>
+        <Industry collegeref="booth"/>
+        <IndustryPercent collegeref="booth"/>
       </div>
     </div>
 
@@ -16,20 +16,17 @@
 </template>
 
 <script>
-import BoothIndustry from "@/components/booth/BoothIndustry.vue";
-import BoothProfile from "@/components/booth/BoothProfile.vue";
-import BoothEmployment from "@/components/booth/BoothEmployment.vue";
-import BoothIndustryPercent from "@/components/booth/BoothIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    BoothIndustry,
-    BoothProfile,
-    BoothEmployment,
-    BoothIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

@@ -1,34 +1,31 @@
 <template>
   <div>
     <!-- Charts -->
-    <div class="container">
+        <div class="container">
       <div class="columns">
-        <StanfordProfile/>
-        <StanfordEmployment/>
+        <Profile collegeref="stanford"/>
+        <Employment collegeref="stanford" />
       </div>
       <div class="columns">
-        <StanfordIndustry/>
-        <StanfordIndustryPercent/>
+        <Industry collegeref="stanford"/>
+        <IndustryPercent collegeref="stanford"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import StanfordIndustry from "@/components/stanford/StanfordIndustry.vue";
-import StanfordProfile from "@/components/stanford/StanfordProfile.vue";
-import StanfordEmployment from "@/components/stanford/StanfordEmployment.vue";
-import StanfordIndustryPercent from "@/components/stanford/StanfordIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    StanfordIndustry,
-    StanfordProfile,
-    StanfordEmployment,
-    StanfordIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

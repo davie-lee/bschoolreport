@@ -3,12 +3,12 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <KelloggProfile/>
-        <KelloggEmployment/>
+        <Profile collegeref="kellogg"/>
+        <Employment collegeref="kellogg" />
       </div>
       <div class="columns">
-        <KelloggIndustry/>
-        <KelloggIndustryPercent/>
+        <Industry collegeref="kellogg"/>
+        <IndustryPercent collegeref="kellogg"/>
       </div>
     </div>
 
@@ -16,20 +16,17 @@
 </template>
 
 <script>
-import KelloggIndustry from "@/components/kellogg/KelloggIndustry.vue";
-import KelloggProfile from "@/components/kellogg/KelloggProfile.vue";
-import KelloggEmployment from "@/components/kellogg/KelloggEmployment.vue";
-import KelloggIndustryPercent from "@/components/kellogg/KelloggIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    KelloggIndustry,
-    KelloggProfile,
-    KelloggEmployment,
-    KelloggIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

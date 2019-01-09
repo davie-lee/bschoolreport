@@ -7,7 +7,6 @@ import Sloan from "./views/Sloan.vue";
 import Kellogg from "./views/Kellogg.vue";
 import Columbia from "./views/Columbia.vue";
 import Booth from "./views/Booth.vue";
-import Test from "./views/Test.vue";
 Vue.use(Router);
 
 export default new Router({
@@ -47,11 +46,6 @@ export default new Router({
       path: "/booth",
       name: "booth",
       component: Booth
-    },
-    {
-      path: "/test",
-      name: "test",
-      component: Test
     }
   ]
 });

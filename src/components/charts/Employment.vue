@@ -53,24 +53,17 @@ export default {
         series: [
           {
             name: "Total",
-            data: [
-              ["Seeking Employment", ""],
-              ["Company Sponsored", ""],
-              ["Self Employed", ""],
-              ["Postponed Job Search", ""],
-              ["Continuing Education", ""],
-              ["No Response", ""]
-            ]
+            data: []
           }
         ]
       }
     };
   },
   mounted: async function() {
-    await this.getEmploymentReport();
+    await this.getEmploymentData();
   },
   methods: {
-    getEmploymentReport: async function() {
+    getEmploymentData: async function() {
       var vm = this;
       vm.isDataReady = false;
       var dbRef = firebase
@@ -78,38 +71,18 @@ export default {
         .ref("employment_profile/" + this.collegeref);
 
       dbRef.once("value").then(function(snapshot) {
-        var year = snapshot.child("year2018");
-
-        vm.$set(
-          vm.EmploymentChart.series[0].data[0],
-          1,
-          year.child("Seeking Employment").val()
-        );
-        vm.$set(
-          vm.EmploymentChart.series[0].data[1],
-          1,
-          year.child("Company Sponsored").val()
-        );
-        vm.$set(
-          vm.EmploymentChart.series[0].data[2],
-          1,
-          year.child("Starting Own Business").val()
-        );
-        vm.$set(
-          vm.EmploymentChart.series[0].data[3],
-          1,
-          year.child("Postponing Job Search").val()
-        );
-        vm.$set(
-          vm.EmploymentChart.series[0].data[4],
-          1,
-          year.child("Continuing Education").val()
-        );
-        vm.$set(
-          vm.EmploymentChart.series[0].data[5],
-          1,
-          year.child("No Response").val()
-        );
+        let year = snapshot.child("year2018");
+        let itr = 0;
+        year.forEach(function(childSnapshot) {
+          // key will be "ada" the first time and "alan" the second time
+          var key = childSnapshot.key;
+          // childData will be the actual contents of the child
+          var childData = childSnapshot.val();
+          if (key != "Total") {
+            vm.$set(vm.EmploymentChart.series[0].data, itr, [key, childData]);
+            itr++;
+          }
+        });
 
         vm.EmploymentChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
