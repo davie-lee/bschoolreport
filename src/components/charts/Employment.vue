@@ -74,9 +74,7 @@ export default {
         let year = snapshot.child("year2018");
         let itr = 0;
         year.forEach(function(childSnapshot) {
-          // key will be "ada" the first time and "alan" the second time
           var key = childSnapshot.key;
-          // childData will be the actual contents of the child
           var childData = childSnapshot.val();
           if (key != "Total") {
             vm.$set(vm.EmploymentChart.series[0].data, itr, [key, childData]);

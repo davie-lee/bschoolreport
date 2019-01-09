@@ -85,9 +85,7 @@ export default {
         let year = snapshot.child("year2018/percent_accepts");
         let itr = 0;
         year.forEach(function(childSnapshot) {
-          // key will be "ada" the first time and "alan" the second time
           var key = childSnapshot.key;
-          // childData will be the actual contents of the child
           var childData = childSnapshot.val();
           vm.$set(vm.IndPercentChart.xAxis.categories, itr, key);
           vm.$set(vm.IndPercentChart.series[0].data, itr, childData);

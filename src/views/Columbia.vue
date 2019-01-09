@@ -21,7 +21,7 @@ import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-  //  Employment,
+    //  Employment,
     Industry,
     IndustryPercent,
     Profile
