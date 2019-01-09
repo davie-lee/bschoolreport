@@ -4,7 +4,7 @@
     <div class="container">
       <div class="columns">
         <WhartonProfile/>
-        <WhartonEmployment/>
+        <Employment collegeref="wharton"/>
       </div>
       <div class="columns">
         <WhartonIndustry/>
@@ -17,14 +17,14 @@
 <script>
 import WhartonIndustry from "@/components/wharton/WhartonIndustry.vue";
 import WhartonProfile from "@/components/wharton/WhartonProfile.vue";
-import WhartonEmployment from "@/components/wharton/WhartonEmployment.vue";
+import Employment from "../components/charts/Employment.vue";
 import WhartonIndustryPercent from "@/components/wharton/WhartonIndustryPercent.vue";
 
 export default {
   components: {
     WhartonIndustry,
     WhartonProfile,
-    WhartonEmployment,
+    Employment,
     WhartonIndustryPercent
   }
 };

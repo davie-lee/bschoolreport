@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      areaOptions: data.SloanEmployment
+      areaOptions: data.SloanIndustryPercent
     };
   },
   mounted() {},
