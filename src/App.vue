@@ -14,7 +14,7 @@
 <script>
 import Selector from "@/components/Selector";
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Footer";
 
 export default {
   components: {

@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import store from "./store";
 import Login from "./views/auth/Login.vue";
+import Signup from "./views/auth/Signup.vue";
 import Harvard from "./views/Harvard.vue";
 import Wharton from "./views/Wharton.vue";
 import Stanford from "./views/Stanford.vue";
@@ -19,6 +20,11 @@ const router = new Router({
       path: "/login",
       name: "login",
       component: Login
+    },
+    {
+      path: "/signup",
+      name: "signup",
+      component: Signup
     },
     {
       path: "/",
