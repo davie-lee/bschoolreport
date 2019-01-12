@@ -9,6 +9,20 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
+              <p v-if="isLoggedIn" @click="logout()" class="control">
+                <a
+                  class="button is-info is-rounded"
+                >
+                  <span>Logout</span>
+                </a>
+              </p>
+              <p v-else @click="router.push('/login')" class="control">
+                <a
+                  class="button is-info is-rounded"
+                >
+                  <span>Sign in</span>
+                </a>
+              </p>
               <p class="control">
                 <a
                   class="button is-info is-rounded"
@@ -27,7 +41,20 @@
 </template>
 
 <script>
-export default {};
+import { mapActions, mapState } from "vuex";
+import router from "../router";
+
+export default {
+  methods: {
+    ...mapActions(["logout"])
+  },
+  computed: {
+    ...mapState({
+      isLoggedIn: "isLoggedIn"
+    }),
+    router: () => router
+  }
+};
 </script>
 
 <style scoped>

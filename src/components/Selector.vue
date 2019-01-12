@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <router-link :to="{ name: 'home' }">
+    <router-link :to="{ name: 'harvard' }">
       <a class="button is-small is-rounded">Harvard</a>
     </router-link>
     <router-link :to="{ name: 'stanford' }">

@@ -1,49 +1,30 @@
 <template>
   <div>
-    <section class="hero is-white has-text-center">
-      <NavBar/>
-    </section>
-
-    <!-- School Menu -->
-    <Selector/>
-
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <ColumbiaProfile/>
-        <ColumbiaIndustry/>
+        <Profile collegeref="columbia"/>
+        <Industry collegeref="columbia"/>
       </div>
       <div class="columns">
-        <ColumbiaIndustryPercent/>
+        <IndustryPercent collegeref="columbia"/>
       </div>
     </div>
-
-    <!-- Footer -->
-    <Footer/>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Footer from "@/components/Footer.vue";
-import Selector from "@/components/Selector.vue";
-import ColumbiaIndustry from "@/components/columbia/ColumbiaIndustry.vue";
-import ColumbiaProfile from "@/components/columbia/ColumbiaProfile.vue";
-//import ColumbiaEmployment from "@/components/columbia/ColumbiaEmployment.vue";
-import ColumbiaIndustryPercent from "@/components/columbia/ColumbiaIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+// import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    NavBar,
-    Footer,
-    Selector,
-    ColumbiaIndustry,
-    ColumbiaProfile,
-    //ColumbiaEmployment,
-    ColumbiaIndustryPercent
+    //  Employment,
+    Industry,
+    IndustryPercent,
+    Profile
   }
 };
 </script>
-
-<style>
-</style>

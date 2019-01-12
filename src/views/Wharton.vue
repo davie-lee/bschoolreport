@@ -1,50 +1,31 @@
 <template>
   <div>
-    <section class="hero is-white has-text-center">
-      <NavBar/>
-    </section>
-
-    <!-- School Menu -->
-    <Selector/>
-
     <!-- Charts -->
-    <div class="container">
+        <div class="container">
       <div class="columns">
-        <WhartonProfile/>
-        <WhartonEmployment/>
+        <Profile collegeref="wharton"/>
+        <Employment collegeref="wharton" />
       </div>
       <div class="columns">
-        <WhartonIndustry/>
-        <WhartonIndustryPercent/>
+        <Industry collegeref="wharton"/>
+        <IndustryPercent collegeref="wharton"/>
       </div>
     </div>
-
-    <!-- Footer -->
-    <Footer/>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Footer from "@/components/Footer.vue";
-import Selector from "@/components/Selector.vue";
-import WhartonIndustry from "@/components/wharton/WhartonIndustry.vue";
-import WhartonProfile from "@/components/wharton/WhartonProfile.vue";
-import WhartonEmployment from "@/components/wharton/WhartonEmployment.vue";
-import WhartonIndustryPercent from "@/components/wharton/WhartonIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    NavBar,
-    Footer,
-    Selector,
-    WhartonIndustry,
-    WhartonProfile,
-    WhartonEmployment,
-    WhartonIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

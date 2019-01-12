@@ -1,50 +1,31 @@
 <template>
   <div>
-    <section class="hero is-white has-text-center">
-      <NavBar/>
-    </section>
-
-    <!-- School Menu -->
-    <Selector/>
-
     <!-- Charts -->
-    <div class="container">
+        <div class="container">
       <div class="columns">
-        <SloanProfile/>
-        <SloanEmployment/>
+        <Profile collegeref="sloan"/>
+        <Employment collegeref="sloan" />
       </div>
       <div class="columns">
-        <SloanIndustry/>
-        <SloanIndustryPercent/>
+        <Industry collegeref="sloan"/>
+        <IndustryPercent collegeref="sloan"/>
       </div>
     </div>
-
-    <!-- Footer -->
-    <Footer/>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Footer from "@/components/Footer.vue";
-import Selector from "@/components/Selector.vue";
-import SloanIndustry from "@/components/sloan/SloanIndustry.vue";
-import SloanProfile from "@/components/sloan/SloanProfile.vue";
-import SloanEmployment from "@/components/sloan/SloanEmployment.vue";
-import SloanIndustryPercent from "@/components/sloan/SloanIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    NavBar,
-    Footer,
-    Selector,
-    SloanIndustry,
-    SloanProfile,
-    SloanEmployment,
-    SloanIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>

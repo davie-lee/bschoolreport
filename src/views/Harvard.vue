@@ -3,15 +3,14 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="kellogg"/>
-        <Employment collegeref="kellogg" />
+        <Profile collegeref="harvard"/>
+        <Employment collegeref="harvard" />
       </div>
       <div class="columns">
-        <Industry collegeref="kellogg"/>
-        <IndustryPercent collegeref="kellogg"/>
+        <Industry collegeref="harvard"/>
+        <IndustryPercent collegeref="harvard"/>
       </div>
     </div>
-
   </div>
 </template>
 

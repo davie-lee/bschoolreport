@@ -1,50 +1,31 @@
 <template>
   <div>
-    <section class="hero is-white has-text-center">
-      <NavBar/>
-    </section>
-
-    <!-- School Menu -->
-    <Selector/>
-
     <!-- Charts -->
-    <div class="container">
+        <div class="container">
       <div class="columns">
-        <StanfordProfile/>
-        <StanfordEmployment/>
+        <Profile collegeref="stanford"/>
+        <Employment collegeref="stanford" />
       </div>
       <div class="columns">
-        <StanfordIndustry/>
-        <StanfordIndustryPercent/>
+        <Industry collegeref="stanford"/>
+        <IndustryPercent collegeref="stanford"/>
       </div>
     </div>
-
-    <!-- Footer -->
-    <Footer/>
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar.vue";
-import Footer from "@/components/Footer.vue";
-import Selector from "@/components/Selector.vue";
-import StanfordIndustry from "@/components/stanford/StanfordIndustry.vue";
-import StanfordProfile from "@/components/stanford/StanfordProfile.vue";
-import StanfordEmployment from "@/components/stanford/StanfordEmployment.vue";
-import StanfordIndustryPercent from "@/components/stanford/StanfordIndustryPercent.vue";
+import Profile from "../components/charts/Profile";
+import Employment from "../components/charts/Employment";
+import Industry from "../components/charts/Industry";
+import IndustryPercent from "../components/charts/IndustryPercent";
 
 export default {
   components: {
-    NavBar,
-    Footer,
-    Selector,
-    StanfordIndustry,
-    StanfordProfile,
-    StanfordEmployment,
-    StanfordIndustryPercent
+    Employment,
+    Industry,
+    Profile,
+    IndustryPercent
   }
 };
 </script>
-
-<style>
-</style>
