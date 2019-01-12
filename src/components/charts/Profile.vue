@@ -88,7 +88,7 @@ export default {
           var key = childSnapshot.key; // every year
 
           if (key != "source") {
-            var totalData = childSnapshot.child("total").val();
+            var totalData = childSnapshot.child("Total").val();
             vm.$set(vm.ProfileChart.xAxis.categories, itr, key);
             vm.$set(vm.ProfileChart.series[0].data, itr, totalData);
             itr++;

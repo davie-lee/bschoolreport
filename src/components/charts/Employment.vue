@@ -36,8 +36,6 @@ export default {
         },
         plotOptions: {
           pie: {
-            innerSize: 100,
-            depth: 45,
             dataLabels: {
               enabled: true,
               format: "<b>{point.name}</b>: {point.percentage:.1f} %",
