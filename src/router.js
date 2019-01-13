@@ -2,12 +2,13 @@ import Vue from "vue";
 import Router from "vue-router";
 import store from "./store";
 
+import Home from "./views/Home.vue";
+
 // Authentication
 import Login from "./views/auth/Login.vue";
 import Signup from "./views/auth/Signup.vue";
 
-// Views
-import Home from "./views/Home.vue";
+// Schools
 import Harvard from "./views/Harvard.vue";
 import Wharton from "./views/Wharton.vue";
 import Stanford from "./views/Stanford.vue";
@@ -15,6 +16,10 @@ import Sloan from "./views/Sloan.vue";
 import Kellogg from "./views/Kellogg.vue";
 import Columbia from "./views/Columbia.vue";
 import Booth from "./views/Booth.vue";
+import Yale from "./views/Yale.vue";
+
+// Industries
+//import Industry from "./views/Industry.vue";
 
 Vue.use(Router);
 
@@ -74,6 +79,12 @@ const router = new Router({
       path: "/booth",
       name: "booth",
       component: Booth,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: "/yale",
+      name: "yale",
+      component: Yale,
       meta: { requiresAuth: true }
     }
   ]

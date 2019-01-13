@@ -19,6 +19,10 @@
         <Function collegeref="harvard"/>
         <FunctionPercent collegeref="harvard"/>
       </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="harvard"/>
+        <JobLocation collegeref="harvard"/>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +40,8 @@ import Industry from "../components/charts/Industry";
 import IndustryPercent from "../components/charts/IndustryPercent";
 import Function from "../components/charts/Function";
 import FunctionPercent from "../components/charts/FunctionPercent";
+import JobLocation from "../components/charts/JobLocation";
+import FinanceBreakdown from "../components/charts/FinanceBreakdown";
 
 export default {
   components: {
@@ -47,7 +53,9 @@ export default {
     AvgWorkWE,
     IndustryPercent,
     Function,
-    FunctionPercent
+    FunctionPercent,
+    FinanceBreakdown,
+    JobLocation
   }
 };
 </script>

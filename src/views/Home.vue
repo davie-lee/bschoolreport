@@ -3,13 +3,16 @@
     <section class="hero is-info is-large">
       <div class="hero-body">
         <div class="container has-text-centered">
-          <p class="title">MBA Employment Data</p>
+          <p class="title">MBA Job Placement Data</p>
           <p
             class="subtitle"
-          >We visualized all the employment salary report data issued by the top business schools we could find to help you make better decisions</p>
+          >A free resource for prospective mba students to easily view and analyze job placement statistics issued by the top business schools.</p>
           <router-link :to="{ name: 'harvard' }">
-            <a class="button is-info is-inverted is-large">Browse Data for Free</a>
+            <a class="button is-info is-inverted is-large">Browse by Schools</a>
           </router-link>
+          <!--<router-link :to="{ name: 'industry' }">
+            <a class="button is-info is-inverted is-large">Browse by Industries</a>
+          </router-link>-->
         </div>
       </div>
     </section>

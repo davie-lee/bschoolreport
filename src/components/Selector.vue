@@ -21,6 +21,9 @@
     <router-link :to="{ name: 'columbia' }">
       <a class="button is-small is-rounded">Columbia</a>
     </router-link>
+    <router-link :to="{ name: 'yale' }">
+      <a class="button is-small is-rounded">Yale</a>
+    </router-link>
   </div>
 </template>
 
