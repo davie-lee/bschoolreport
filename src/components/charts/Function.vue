@@ -2,7 +2,7 @@
   <div class="column is-6">
     <div class="card">
       <div class="content">
-        <vue-highcharts v-if="isDataReady" :options="IndPercentChart" ref="areaCharts"></vue-highcharts>
+        <vue-highcharts v-if="isDataReady" :options="FunctionChart" ref="areaCharts"></vue-highcharts>
       </div>
     </div>
   </div>
@@ -20,12 +20,12 @@ export default {
   data() {
     return {
       isDataReady: false,
-      IndPercentChart: {
+      FunctionChart: {
         chart: {
           type: "bar"
         },
         title: {
-          text: "Percent Accepts by Industry"
+          text: "Median Salary by Job Function"
         },
         subtitle: {
           text: ""
@@ -39,18 +39,18 @@ export default {
         yAxis: {
           min: 0,
           title: {
-            text: "Percent (%)",
+            text: "Dollar ($)",
             align: "high"
           }
         },
         tooltip: {
-          valueSuffix: "%"
+          valuePrefix: "$"
         },
         plotOptions: {
           bar: {
             dataLabels: {
               enabled: true,
-              format: "{point.y}%",
+              format: "${point.y}",
               style: {
                 fontSize: "9px"
               }
@@ -66,7 +66,7 @@ export default {
         series: [
           {
             name: "2018",
-            color: "#01a3a4",
+            color: "#00d2d3",
             data: []
           }
         ]
@@ -74,26 +74,26 @@ export default {
     };
   },
   mounted() {
-    this.getIndPercentData();
+    this.getFunctionData();
   },
   methods: {
-    getIndPercentData: function() {
+    getFunctionData: function() {
       var vm = this;
       vm.isDataReady = false;
-      var dbRef = firebase.database().ref("industry_comp/" + this.collegeref);
+      var dbRef = firebase.database().ref("function_comp/" + this.collegeref);
 
       dbRef.once("value").then(function(snapshot) {
-        let year = snapshot.child("year2018/percent_accepts");
+        let year = snapshot.child("year2018/median_salary");
         let itr = 0;
         year.forEach(function(childSnapshot) {
           var key = childSnapshot.key;
           var childData = childSnapshot.val();
-          vm.$set(vm.IndPercentChart.xAxis.categories, itr, key);
-          vm.$set(vm.IndPercentChart.series[0].data, itr, childData);
+          vm.$set(vm.FunctionChart.xAxis.categories, itr, key);
+          vm.$set(vm.FunctionChart.series[0].data, itr, childData);
           itr++;
         });
 
-        vm.IndPercentChart.subtitle.text =
+        vm.FunctionChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
         vm.isDataReady = true;
       });

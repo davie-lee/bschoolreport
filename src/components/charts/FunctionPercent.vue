@@ -2,7 +2,7 @@
   <div class="column is-6">
     <div class="card">
       <div class="content">
-        <vue-highcharts v-if="isDataReady" :options="IndPercentChart" ref="areaCharts"></vue-highcharts>
+        <vue-highcharts v-if="isDataReady" :options="FuncPercentChart" ref="areaCharts"></vue-highcharts>
       </div>
     </div>
   </div>
@@ -20,12 +20,12 @@ export default {
   data() {
     return {
       isDataReady: false,
-      IndPercentChart: {
+      FuncPercentChart: {
         chart: {
           type: "bar"
         },
         title: {
-          text: "Percent Accepts by Industry"
+          text: "Percent Accepts by Function"
         },
         subtitle: {
           text: ""
@@ -66,7 +66,7 @@ export default {
         series: [
           {
             name: "2018",
-            color: "#01a3a4",
+            color: "#00d2d3",
             data: []
           }
         ]
@@ -74,13 +74,13 @@ export default {
     };
   },
   mounted() {
-    this.getIndPercentData();
+    this.getFuncPercentData();
   },
   methods: {
-    getIndPercentData: function() {
+    getFuncPercentData: function() {
       var vm = this;
       vm.isDataReady = false;
-      var dbRef = firebase.database().ref("industry_comp/" + this.collegeref);
+      var dbRef = firebase.database().ref("function_comp/" + this.collegeref);
 
       dbRef.once("value").then(function(snapshot) {
         let year = snapshot.child("year2018/percent_accepts");
@@ -88,12 +88,12 @@ export default {
         year.forEach(function(childSnapshot) {
           var key = childSnapshot.key;
           var childData = childSnapshot.val();
-          vm.$set(vm.IndPercentChart.xAxis.categories, itr, key);
-          vm.$set(vm.IndPercentChart.series[0].data, itr, childData);
+          vm.$set(vm.FuncPercentChart.xAxis.categories, itr, key);
+          vm.$set(vm.FuncPercentChart.series[0].data, itr, childData);
           itr++;
         });
 
-        vm.IndPercentChart.subtitle.text =
+        vm.FuncPercentChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
         vm.isDataReady = true;
       });

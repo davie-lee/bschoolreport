@@ -50,6 +50,7 @@ export default {
           bar: {
             dataLabels: {
               enabled: true,
+              format: "${point.y}",
               style: {
                 fontSize: "9px"
               }
