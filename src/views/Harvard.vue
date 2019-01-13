@@ -9,7 +9,11 @@
       </div>
       <div class="columns">
         <AvgWorkWE collegeref="harvard"/>
+        <AverageGPA collegeref="harvard"/>
+      </div>
+      <div class="columns">
         <Employment collegeref="harvard"/>
+        <FinanceBreakdown collegeref="harvard"/>
       </div>
       <div class="columns">
         <Industry collegeref="harvard"/>
@@ -20,7 +24,6 @@
         <FunctionPercent collegeref="harvard"/>
       </div>
       <div class="columns">
-        <FinanceBreakdown collegeref="harvard"/>
         <JobLocation collegeref="harvard"/>
       </div>
     </div>
@@ -42,6 +45,7 @@ import Function from "../components/charts/Function";
 import FunctionPercent from "../components/charts/FunctionPercent";
 import JobLocation from "../components/charts/JobLocation";
 import FinanceBreakdown from "../components/charts/FinanceBreakdown";
+import AverageGPA from "../components/charts/AverageGPA";
 
 export default {
   components: {
@@ -55,7 +59,8 @@ export default {
     Function,
     FunctionPercent,
     FinanceBreakdown,
-    JobLocation
+    JobLocation,
+    AverageGPA
   }
 };
 </script>
