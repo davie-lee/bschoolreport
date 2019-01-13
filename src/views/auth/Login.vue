@@ -2,7 +2,7 @@
   <div id="login">
     <div class="login-card">
       <div class="card-title">
-        <h1>Login to view further</h1>
+        <h1>To view this free data, please login with your free account</h1>
       </div>
       <div class="content">
         <div v-show="emailErrMsg" class="notification is-danger">
@@ -58,7 +58,7 @@
           </span>
           <span class="provider-button__text">Sign in with Google</span>
         </button>
-        <button @click="facebookLogin()" type="button" class="provider-button">
+        <!--<button @click="facebookLogin()" type="button" class="provider-button">
           <span class="provider-button__icon">
             <svg
               viewBox="0 0 266 272"
@@ -84,7 +84,7 @@
             </svg>
           </span>
           <span class="provider-button__text">Sign in with Facebook</span>
-        </button>
+        </button>-->
         <div class="level options signup-suggest">
           <router-link
             tag="a"

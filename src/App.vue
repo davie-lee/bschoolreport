@@ -2,9 +2,8 @@
   <div id="app">
     <vue-headful title="MBA Job Reports" description="Free resource for prospective MBA students"/>
     <section class="hero is-white has-text-center">
-     <NavBar/>
+      <NavBar/>
     </section>
-    <Selector />
     <router-view/>
     <!-- Footer -->
     <Footer/>
@@ -12,13 +11,11 @@
 </template>
 
 <script>
-import Selector from "@/components/Selector";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
 export default {
   components: {
-    Selector,
     NavBar,
     Footer
   }

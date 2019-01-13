@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Selector/>
     <!-- Charts -->
     <div class="container">
       <div class="columns">
@@ -23,6 +24,10 @@
 </template>
 
 <script>
+// School Selector
+import Selector from "@/components/Selector";
+
+// Chart Components
 import Profile from "../components/charts/Profile";
 import InternationalStudents from "../components/charts/InternationalStudents";
 import AvgWorkWE from "../components/charts/AvgWorkWE";
@@ -34,6 +39,7 @@ import FunctionPercent from "../components/charts/FunctionPercent";
 
 export default {
   components: {
+    Selector,
     Employment,
     Industry,
     Profile,

@@ -7,6 +7,7 @@ import Login from "./views/auth/Login.vue";
 import Signup from "./views/auth/Signup.vue";
 
 // Views
+import Home from "./views/Home.vue";
 import Harvard from "./views/Harvard.vue";
 import Wharton from "./views/Wharton.vue";
 import Stanford from "./views/Stanford.vue";
@@ -32,6 +33,11 @@ const router = new Router({
     },
     {
       path: "/",
+      name: "home",
+      component: Home
+    },
+    {
+      path: "/harvard",
       name: "harvard",
       component: Harvard
     },
