@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       FinanceBreakdownChart: {
         chart: {
+          height: 300,
           type: "bar"
         },
         title: {

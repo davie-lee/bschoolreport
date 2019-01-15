@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       ProfileChart: {
         chart: {
+          height: 300,
           type: "area"
         },
         title: {

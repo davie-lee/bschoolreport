@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       FunctionChart: {
         chart: {
+          height: 300,
           type: "bar"
         },
         title: {

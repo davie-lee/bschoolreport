@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       AverageGpaChart: {
         chart: {
+          height: 300,
           type: "line"
         },
         title: {

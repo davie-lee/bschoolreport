@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       EmploymentChart: {
         chart: {
+          height: 300,
           type: "pie",
           options3d: {
             enabled: true,

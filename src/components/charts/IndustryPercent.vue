@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       IndPercentChart: {
         chart: {
+          height: 300,
           type: "bar"
         },
         title: {

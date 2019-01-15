@@ -22,6 +22,7 @@ export default {
       isDataReady: false,
       JobLocationChart: {
         chart: {
+          height: 300,
           type: "column"
         },
         title: {
