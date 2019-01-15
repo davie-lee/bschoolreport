@@ -18,7 +18,7 @@
               </p>
               <p v-else @click="router.push('/login')" class="control">
                 <a class="button is-info is-rounded">
-                  <span>Sign in</span>
+                  <span>Login</span>
                 </a>
               </p>
             </div>

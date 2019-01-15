@@ -31,8 +31,8 @@
         <button
           @click="emailLogin({email: email, password: password})"
           class="login btn btn-primary"
-        >Sign in with email</button>
-        <button @click="googleLogin()" type="button" class="provider-button">
+        >Sign in</button>
+        <!--<button @click="googleLogin()" type="button" class="provider-button">
           <span class="provider-button__icon">
             <svg viewBox="0 0 366 372" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -58,7 +58,7 @@
           </span>
           <span class="provider-button__text">Sign in with Google</span>
         </button>
-        <!--<button @click="facebookLogin()" type="button" class="provider-button">
+        <button @click="facebookLogin()" type="button" class="provider-button">
           <span class="provider-button__icon">
             <svg
               viewBox="0 0 266 272"

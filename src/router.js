@@ -2,8 +2,6 @@ import Vue from "vue";
 import Router from "vue-router";
 import store from "./store";
 
-import Home from "./views/Home.vue";
-
 // Authentication
 import Login from "./views/auth/Login.vue";
 import Signup from "./views/auth/Signup.vue";
@@ -38,13 +36,9 @@ const router = new Router({
     },
     {
       path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/harvard",
       name: "harvard",
-      component: Harvard
+      component: Harvard,
+      alias: "/harvard"
     },
     {
       path: "/wharton",

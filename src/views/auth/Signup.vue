@@ -42,7 +42,7 @@
           @click="emailSignUp({email: email, password: password})"
           class="login btn btn-primary"
         >Sign up with email</button>
-        <button @click="googleLogin()" type="button" class="provider-button">
+        <!--<button @click="googleLogin()" type="button" class="provider-button">
           <span class="provider-button__icon">
             <svg viewBox="0 0 366 372" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -67,7 +67,7 @@
             </svg>
           </span>
           <span class="provider-button__text">Sign up with Google</span>
-        </button>
+        </button>-->
         <div class="level options signup-suggest">
           <router-link
             tag="a"
