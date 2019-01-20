@@ -66,7 +66,7 @@ export default {
         },
         series: [
           {
-            name: "Total Students",
+            name: "Percent (%)",
             color: "#341f97",
             data: []
           }

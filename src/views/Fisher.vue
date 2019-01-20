@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="fisher"/>
-        <InternationalStudents collegeref="fisher"/>
+        <Industry collegeref="fisher"/>
+        <IndustryPercent collegeref="fisher"/>
       </div>
       <div class="columns">
+        <Function collegeref="fisher"/>
+        <FunctionPercent collegeref="fisher"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="fisher"/>
+        <JobLocation collegeref="fisher"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="fisher"/>
+        <MajorEmployer collegeref="fisher"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="fisher"/>
         <Women collegeref="fisher"/>
-        <Countries collegeref="fisher"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="fisher"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="fisher"/>
       </div>
       <div class="columns">
-        <Employment collegeref="fisher"/>
-        <FinanceBreakdown collegeref="fisher"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="fisher"/>
-        <IndustryPercent collegeref="fisher"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="fisher"/>
-        <FunctionPercent collegeref="fisher"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="fisher"/>
+        <InternationalStudents collegeref="fisher"/>
+        <Countries collegeref="fisher"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

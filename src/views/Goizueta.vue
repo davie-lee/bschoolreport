@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="goizueta"/>
-        <InternationalStudents collegeref="goizueta"/>
+        <Industry collegeref="goizueta"/>
+        <IndustryPercent collegeref="goizueta"/>
       </div>
       <div class="columns">
+        <Function collegeref="goizueta"/>
+        <FunctionPercent collegeref="goizueta"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="goizueta"/>
+        <JobLocation collegeref="goizueta"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="goizueta"/>
+        <MajorEmployer collegeref="goizueta"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="goizueta"/>
         <Women collegeref="goizueta"/>
-        <Countries collegeref="goizueta"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="goizueta"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="goizueta"/>
       </div>
       <div class="columns">
-        <Employment collegeref="goizueta"/>
-        <FinanceBreakdown collegeref="goizueta"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="goizueta"/>
-        <IndustryPercent collegeref="goizueta"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="goizueta"/>
-        <FunctionPercent collegeref="goizueta"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="goizueta"/>
+        <InternationalStudents collegeref="goizueta"/>
+        <Countries collegeref="goizueta"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

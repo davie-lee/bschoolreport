@@ -4,35 +4,36 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="kellogg"/>
-        <InternationalStudents collegeref="kellogg"/>
+        <Industry collegeref="rotman"/>
+        <IndustryPercent collegeref="rotman"/>
       </div>
       <div class="columns">
-        <Women collegeref="kellogg"/>
-        <Countries collegeref="kellogg"/>
+        <Function collegeref="rotman"/>
+        <FunctionPercent collegeref="rotman"/>
       </div>
       <div class="columns">
-        <AverageAge collegeref="kellogg"/>
-        <AverageGMAT collegeref="kellogg"/>
+        <FinanceBreakdown collegeref="rotman"/>
+        <JobLocation collegeref="rotman"/>
       </div>
       <div class="columns">
-        <AvgWorkWE collegeref="kellogg"/>
-        <AverageGPA collegeref="kellogg"/>
+        <Employment collegeref="rotman"/>
+        <MajorEmployer collegeref="rotman"/>
       </div>
       <div class="columns">
-        <Employment collegeref="kellogg"/>
-        <FinanceBreakdown collegeref="kellogg"/>
+        <Profile collegeref="rotman"/>
+        <Women collegeref="rotman"/>
       </div>
       <div class="columns">
-        <Industry collegeref="kellogg"/>
-        <IndustryPercent collegeref="kellogg"/>
+        <AverageAge collegeref="rotman"/>
+        <AverageGMAT collegeref="rotman"/>
       </div>
       <div class="columns">
-        <Function collegeref="kellogg"/>
-        <FunctionPercent collegeref="kellogg"/>
+        <AvgWorkWE collegeref="rotman"/>
+        <AverageGPA collegeref="rotman"/>
       </div>
       <div class="columns">
-        <JobLocation collegeref="kellogg"/>
+        <InternationalStudents collegeref="rotman"/>
+        <Countries collegeref="rotman"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

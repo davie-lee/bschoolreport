@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="carlson"/>
-        <InternationalStudents collegeref="carlson"/>
+        <Industry collegeref="carlson"/>
+        <IndustryPercent collegeref="carlson"/>
       </div>
       <div class="columns">
+        <Function collegeref="carlson"/>
+        <FunctionPercent collegeref="carlson"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="carlson"/>
+        <JobLocation collegeref="carlson"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="carlson"/>
+        <MajorEmployer collegeref="carlson"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="carlson"/>
         <Women collegeref="carlson"/>
-        <Countries collegeref="carlson"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="carlson"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="carlson"/>
       </div>
       <div class="columns">
-        <Employment collegeref="carlson"/>
-        <FinanceBreakdown collegeref="carlson"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="carlson"/>
-        <IndustryPercent collegeref="carlson"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="carlson"/>
-        <FunctionPercent collegeref="carlson"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="carlson"/>
+        <InternationalStudents collegeref="carlson"/>
+        <Countries collegeref="carlson"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

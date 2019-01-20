@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="kenanflagler"/>
-        <InternationalStudents collegeref="kenanflagler"/>
+        <Industry collegeref="kenanflagler"/>
+        <IndustryPercent collegeref="kenanflagler"/>
       </div>
       <div class="columns">
+        <Function collegeref="kenanflagler"/>
+        <FunctionPercent collegeref="kenanflagler"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="kenanflagler"/>
+        <JobLocation collegeref="kenanflagler"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="kenanflagler"/>
+        <MajorEmployer collegeref="kenanflagler"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="kenanflagler"/>
         <Women collegeref="kenanflagler"/>
-        <Countries collegeref="kenanflagler"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="kenanflagler"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="kenanflagler"/>
       </div>
       <div class="columns">
-        <Employment collegeref="kenanflagler"/>
-        <FinanceBreakdown collegeref="kenanflagler"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="kenanflagler"/>
-        <IndustryPercent collegeref="kenanflagler"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="kenanflagler"/>
-        <FunctionPercent collegeref="kenanflagler"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="kenanflagler"/>
+        <InternationalStudents collegeref="kenanflagler"/>
+        <Countries collegeref="kenanflagler"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

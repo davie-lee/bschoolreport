@@ -45,7 +45,7 @@ export default {
           }
         },
         tooltip: {
-          valuePrefix: "$"
+          valueSuffix: "%"
         },
         plotOptions: {
           bar: {

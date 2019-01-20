@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="stern"/>
-        <InternationalStudents collegeref="stern"/>
+        <Industry collegeref="stern"/>
+        <IndustryPercent collegeref="stern"/>
       </div>
       <div class="columns">
+        <Function collegeref="stern"/>
+        <FunctionPercent collegeref="stern"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="stern"/>
+        <JobLocation collegeref="stern"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="stern"/>
+        <MajorEmployer collegeref="stern"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="stern"/>
         <Women collegeref="stern"/>
-        <Countries collegeref="stern"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="stern"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="stern"/>
       </div>
       <div class="columns">
-        <Employment collegeref="stern"/>
-        <FinanceBreakdown collegeref="stern"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="stern"/>
-        <IndustryPercent collegeref="stern"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="stern"/>
-        <FunctionPercent collegeref="stern"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="stern"/>
+        <InternationalStudents collegeref="stern"/>
+        <Countries collegeref="stern"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

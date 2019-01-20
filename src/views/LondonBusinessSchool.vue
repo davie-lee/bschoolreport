@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="lbs"/>
-        <InternationalStudents collegeref="lbs"/>
+        <Industry collegeref="lbs"/>
+        <IndustryPercent collegeref="lbs"/>
       </div>
       <div class="columns">
+        <Function collegeref="lbs"/>
+        <FunctionPercent collegeref="lbs"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="lbs"/>
+        <JobLocation collegeref="lbs"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="lbs"/>
+        <MajorEmployer collegeref="lbs"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="lbs"/>
         <Women collegeref="lbs"/>
-        <Countries collegeref="lbs"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="lbs"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="lbs"/>
       </div>
       <div class="columns">
-        <Employment collegeref="lbs"/>
-        <FinanceBreakdown collegeref="lbs"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="lbs"/>
-        <IndustryPercent collegeref="lbs"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="lbs"/>
-        <FunctionPercent collegeref="lbs"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="lbs"/>
+        <InternationalStudents collegeref="lbs"/>
+        <Countries collegeref="lbs"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>

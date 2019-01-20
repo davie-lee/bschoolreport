@@ -4,12 +4,24 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="owen"/>
-        <InternationalStudents collegeref="owen"/>
+        <Industry collegeref="owen"/>
+        <IndustryPercent collegeref="owen"/>
       </div>
       <div class="columns">
+        <Function collegeref="owen"/>
+        <FunctionPercent collegeref="owen"/>
+      </div>
+      <div class="columns">
+        <FinanceBreakdown collegeref="owen"/>
+        <JobLocation collegeref="owen"/>
+      </div>
+      <div class="columns">
+        <Employment collegeref="owen"/>
+        <MajorEmployer collegeref="owen"/>
+      </div>
+      <div class="columns">
+        <Profile collegeref="owen"/>
         <Women collegeref="owen"/>
-        <Countries collegeref="owen"/>
       </div>
       <div class="columns">
         <AverageAge collegeref="owen"/>
@@ -20,19 +32,8 @@
         <AverageGPA collegeref="owen"/>
       </div>
       <div class="columns">
-        <Employment collegeref="owen"/>
-        <FinanceBreakdown collegeref="owen"/>
-      </div>
-      <div class="columns">
-        <Industry collegeref="owen"/>
-        <IndustryPercent collegeref="owen"/>
-      </div>
-      <div class="columns">
-        <Function collegeref="owen"/>
-        <FunctionPercent collegeref="owen"/>
-      </div>
-      <div class="columns">
-        <JobLocation collegeref="owen"/>
+        <InternationalStudents collegeref="owen"/>
+        <Countries collegeref="owen"/>
       </div>
     </div>
   </div>
@@ -58,6 +59,7 @@ import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
 import Countries from "../components/charts/Countries";
 import Women from "../components/charts/Women";
+import MajorEmployer from "../components/charts/MajorEmployers";
 
 export default {
   components: {
@@ -76,7 +78,8 @@ export default {
     JobLocation,
     AverageGPA,
     Countries,
-    Women
+    Women,
+    MajorEmployer
   }
 };
 </script>
