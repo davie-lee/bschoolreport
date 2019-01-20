@@ -4,35 +4,35 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="sloan"/>
-        <InternationalStudents collegeref="sloan"/>
+        <Profile collegeref="jones"/>
+        <InternationalStudents collegeref="jones"/>
       </div>
       <div class="columns">
-        <Women collegeref="sloan"/>
-        <Countries collegeref="sloan"/>
+        <Women collegeref="jones"/>
+        <Countries collegeref="jones"/>
       </div>
       <div class="columns">
-        <AverageAge collegeref="sloan"/>
-        <AverageGMAT collegeref="sloan"/>
+        <AverageAge collegeref="jones"/>
+        <AverageGMAT collegeref="jones"/>
       </div>
       <div class="columns">
-        <AvgWorkWE collegeref="sloan"/>
-        <AverageGPA collegeref="sloan"/>
+        <AvgWorkWE collegeref="jones"/>
+        <AverageGPA collegeref="jones"/>
       </div>
       <div class="columns">
-        <Employment collegeref="sloan"/>
-        <FinanceBreakdown collegeref="sloan"/>
+        <Employment collegeref="jones"/>
+        <FinanceBreakdown collegeref="jones"/>
       </div>
       <div class="columns">
-        <Industry collegeref="sloan"/>
-        <IndustryPercent collegeref="sloan"/>
+        <Industry collegeref="jones"/>
+        <IndustryPercent collegeref="jones"/>
       </div>
       <div class="columns">
-        <Function collegeref="sloan"/>
-        <FunctionPercent collegeref="sloan"/>
+        <Function collegeref="jones"/>
+        <FunctionPercent collegeref="jones"/>
       </div>
       <div class="columns">
-        <JobLocation collegeref="sloan"/>
+        <JobLocation collegeref="jones"/>
       </div>
     </div>
   </div>

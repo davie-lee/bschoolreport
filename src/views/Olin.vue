@@ -4,35 +4,35 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Profile collegeref="sloan"/>
-        <InternationalStudents collegeref="sloan"/>
+        <Profile collegeref="olin"/>
+        <InternationalStudents collegeref="olin"/>
       </div>
       <div class="columns">
-        <Women collegeref="sloan"/>
-        <Countries collegeref="sloan"/>
+        <Women collegeref="olin"/>
+        <Countries collegeref="olin"/>
       </div>
       <div class="columns">
-        <AverageAge collegeref="sloan"/>
-        <AverageGMAT collegeref="sloan"/>
+        <AverageAge collegeref="olin"/>
+        <AverageGMAT collegeref="olin"/>
       </div>
       <div class="columns">
-        <AvgWorkWE collegeref="sloan"/>
-        <AverageGPA collegeref="sloan"/>
+        <AvgWorkWE collegeref="olin"/>
+        <AverageGPA collegeref="olin"/>
       </div>
       <div class="columns">
-        <Employment collegeref="sloan"/>
-        <FinanceBreakdown collegeref="sloan"/>
+        <Employment collegeref="olin"/>
+        <FinanceBreakdown collegeref="olin"/>
       </div>
       <div class="columns">
-        <Industry collegeref="sloan"/>
-        <IndustryPercent collegeref="sloan"/>
+        <Industry collegeref="olin"/>
+        <IndustryPercent collegeref="olin"/>
       </div>
       <div class="columns">
-        <Function collegeref="sloan"/>
-        <FunctionPercent collegeref="sloan"/>
+        <Function collegeref="olin"/>
+        <FunctionPercent collegeref="olin"/>
       </div>
       <div class="columns">
-        <JobLocation collegeref="sloan"/>
+        <JobLocation collegeref="olin"/>
       </div>
     </div>
   </div>

@@ -2,12 +2,13 @@
   <div id="nav">
     <nav class="navbar is-transparent">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="@/assets/bschool_logo.png">
-        </a>
+        <router-link :to="{ name: 'home' }">
+          <a class="navbar-item" href="/">
+            <img src="@/assets/bschool_logo.png">
+          </a>
+        </router-link>
       </div>
-
-      <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-menu is-transparent">
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
@@ -47,4 +48,29 @@ export default {
 </script>
 
 <style scoped>
+.navbar-item {
+  display: flex;
+}
+
+.navbar,
+.navbar-menu,
+.navbar-start,
+.navbar-end {
+  align-items: stretch;
+  display: flex;
+  padding: 0;
+}
+
+.navbar-menu {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.navbar-start {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+}
 </style>

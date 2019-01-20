@@ -8,8 +8,16 @@
         <InternationalStudents collegeref="stanford"/>
       </div>
       <div class="columns">
-        <AvgWorkWE collegeref="stanford"/>
+        <Women collegeref="stanford"/>
+        <Countries collegeref="stanford"/>
+      </div>
+      <div class="columns">
+        <AverageAge collegeref="stanford"/>
         <AverageGMAT collegeref="stanford"/>
+      </div>
+      <div class="columns">
+        <AvgWorkWE collegeref="stanford"/>
+        <AverageGPA collegeref="stanford"/>
       </div>
       <div class="columns">
         <Employment collegeref="stanford"/>
@@ -45,22 +53,30 @@ import Function from "../components/charts/Function";
 import FunctionPercent from "../components/charts/FunctionPercent";
 import JobLocation from "../components/charts/JobLocation";
 import FinanceBreakdown from "../components/charts/FinanceBreakdown";
+import AverageGPA from "../components/charts/AverageGPA";
+import AverageAge from "../components/charts/AverageAge";
 import AverageGMAT from "../components/charts/AverageGMAT";
+import Countries from "../components/charts/Countries";
+import Women from "../components/charts/Women";
 
 export default {
   components: {
     Selector,
-    Employment,
-    Industry,
     Profile,
     InternationalStudents,
+    AverageAge,
+    AverageGMAT,
     AvgWorkWE,
+    Employment,
+    Industry,
     IndustryPercent,
     Function,
     FunctionPercent,
     FinanceBreakdown,
     JobLocation,
-    AverageGMAT
+    AverageGPA,
+    Countries,
+    Women
   }
 };
 </script>
