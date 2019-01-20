@@ -2,7 +2,7 @@
   <div class="column is-6">
     <div class="card">
       <div class="content">
-        <vue-highcharts v-if="isDataReady" :options="JobLocationChart" ref="areaCharts"></vue-highcharts>
+        <vue-highcharts v-if="isDataReady" :options="WomenChart" ref="areaCharts"></vue-highcharts>
       </div>
     </div>
   </div>
@@ -20,38 +20,38 @@ export default {
   data() {
     return {
       isDataReady: false,
-      JobLocationChart: {
+      WomenChart: {
         chart: {
           height: 300,
           type: "column"
         },
         title: {
-          text: "Job Location Placement"
+          text: "Percentage of Women Students"
         },
         subtitle: {
           text: ""
         },
         xAxis: {
           categories: [],
+          tickmarkPlacement: "on",
           title: {
-            text: null
-          }
-        },
-        yAxis: {
-          min: 0,
-          title: {
-            text: "Percent (%)",
+            enabled: true,
+            text: "Students",
             align: "high"
           }
         },
+        yAxis: {
+          title: {
+            enabled: false
+          }
+        },
         tooltip: {
-          valueSuffix: "%"
+          split: true
         },
         plotOptions: {
           column: {
             dataLabels: {
               enabled: true,
-              format: "{point.y}%",
               style: {
                 fontSize: "9px"
               }
@@ -66,8 +66,8 @@ export default {
         },
         series: [
           {
-            name: "2018",
-            color: "#ff6b6b",
+            name: "Women Students",
+            color: "#00d2d3",
             data: []
           }
         ]
@@ -75,26 +75,27 @@ export default {
     };
   },
   mounted() {
-    this.getJobLocatonData();
+    this.getWomenData();
   },
   methods: {
-    getJobLocatonData: function() {
+    getWomenData: function() {
       var vm = this;
       vm.isDataReady = false;
-      var dbRef = firebase.database().ref("job_location/" + this.collegeref);
+      var dbRef = firebase.database().ref("demographics/" + this.collegeref);
 
       dbRef.once("value").then(function(snapshot) {
-        let year = snapshot.child("year2018/percent");
         let itr = 0;
-        year.forEach(function(childSnapshot) {
-          var key = childSnapshot.key;
-          var childData = childSnapshot.val();
-          vm.$set(vm.JobLocationChart.xAxis.categories, itr, key);
-          vm.$set(vm.JobLocationChart.series[0].data, itr, childData);
-          itr++;
-        });
+        snapshot.forEach(function(childSnapshot) {
+          var key = childSnapshot.key; // every year
 
-        vm.JobLocationChart.subtitle.text =
+          if (key != "source") {
+            var totalData = childSnapshot.child("Women").val();
+            vm.$set(vm.WomenChart.xAxis.categories, itr, key);
+            vm.$set(vm.WomenChart.series[0].data, itr, totalData);
+            itr++;
+          }
+        });
+        vm.WomenChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
         vm.isDataReady = true;
       });

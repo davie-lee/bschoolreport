@@ -2,7 +2,7 @@
   <div class="column is-6">
     <div class="card">
       <div class="content">
-        <vue-highcharts v-if="isDataReady" :options="JobLocationChart" ref="areaCharts"></vue-highcharts>
+        <vue-highcharts v-if="isDataReady" :options="AverageAgeChart" ref="areaCharts"></vue-highcharts>
       </div>
     </div>
   </div>
@@ -20,38 +20,38 @@ export default {
   data() {
     return {
       isDataReady: false,
-      JobLocationChart: {
+      AverageAgeChart: {
         chart: {
           height: 300,
-          type: "column"
+          type: "line"
         },
         title: {
-          text: "Job Location Placement"
+          text: "Average Age"
         },
         subtitle: {
           text: ""
         },
         xAxis: {
           categories: [],
+          tickmarkPlacement: "on",
           title: {
-            text: null
-          }
-        },
-        yAxis: {
-          min: 0,
-          title: {
-            text: "Percent (%)",
+            enabled: true,
+            text: "Students",
             align: "high"
           }
         },
+        yAxis: {
+          title: {
+            enabled: false
+          }
+        },
         tooltip: {
-          valueSuffix: "%"
+          split: true
         },
         plotOptions: {
-          column: {
+          line: {
             dataLabels: {
               enabled: true,
-              format: "{point.y}%",
               style: {
                 fontSize: "9px"
               }
@@ -66,8 +66,8 @@ export default {
         },
         series: [
           {
-            name: "2018",
-            color: "#ff6b6b",
+            name: "Age",
+            color: "#ee5253",
             data: []
           }
         ]
@@ -75,26 +75,27 @@ export default {
     };
   },
   mounted() {
-    this.getJobLocatonData();
+    this.getAverageAgeData();
   },
   methods: {
-    getJobLocatonData: function() {
+    getAverageAgeData: function() {
       var vm = this;
       vm.isDataReady = false;
-      var dbRef = firebase.database().ref("job_location/" + this.collegeref);
+      var dbRef = firebase.database().ref("demographics/" + this.collegeref);
 
       dbRef.once("value").then(function(snapshot) {
-        let year = snapshot.child("year2018/percent");
         let itr = 0;
-        year.forEach(function(childSnapshot) {
-          var key = childSnapshot.key;
-          var childData = childSnapshot.val();
-          vm.$set(vm.JobLocationChart.xAxis.categories, itr, key);
-          vm.$set(vm.JobLocationChart.series[0].data, itr, childData);
-          itr++;
-        });
+        snapshot.forEach(function(childSnapshot) {
+          var key = childSnapshot.key; // every year
 
-        vm.JobLocationChart.subtitle.text =
+          if (key != "source") {
+            var totalData = childSnapshot.child("Average Age").val();
+            vm.$set(vm.AverageAgeChart.xAxis.categories, itr, key);
+            vm.$set(vm.AverageAgeChart.series[0].data, itr, totalData);
+            itr++;
+          }
+        });
+        vm.AverageAgeChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
         vm.isDataReady = true;
       });

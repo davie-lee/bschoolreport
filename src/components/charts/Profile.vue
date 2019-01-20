@@ -23,7 +23,7 @@ export default {
       ProfileChart: {
         chart: {
           height: 300,
-          type: "area"
+          type: "column"
         },
         title: {
           text: "Total Students Enrolled"
@@ -49,7 +49,7 @@ export default {
           split: true
         },
         plotOptions: {
-          area: {
+          column: {
             dataLabels: {
               enabled: true,
               style: {
