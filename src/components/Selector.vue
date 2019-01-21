@@ -105,6 +105,13 @@
     <router-link :to="{ name: 'yale' }">
       <a class="button is-small is-rounded">Yale</a>
     </router-link>
+    <div class="note">
+      <b>Note</b>: If a chart is blank or says null, it indicates we couldn't find the data easily. If you'd like to help find the data, please contribute to our community
+      <a
+        href="https://docs.google.com/spreadsheets/d/1t8F4GpEQUZ38cASm80WsmF0mYGRfsuu0v0Q7NaHmsp8/edit?usp=sharing"
+        target="new"
+      >here</a>.
+    </div>
   </div>
 </template>
 
@@ -119,5 +126,12 @@ export default {};
 
 .container {
   margin-bottom: 20px;
+}
+
+.note {
+  margin-top: 15px;
+  font-size: 11px;
+  color: #8395a7;
+  font-style: italic;
 }
 </style>

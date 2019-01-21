@@ -2,13 +2,17 @@
   <div>
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          Don't see a school? Want to see specific data? Let me know
-          <a
-            href="https://mbajobreport.typeform.com/to/hMGk76"
-            target="new"
-          >here</a> so I can scrape it and add it!
-        </p>
+        <div class="columns is-mobile">
+          <div class="column is-three-fifths is-offset-one-fifth">
+            <img class="avatar" src="@/assets/avatar.png" width="100px'">
+            <div class="blurb">
+              Hello! I'm Davie, a tech entrepreneur and the developer behind this site. I built this site initially to help some friends who were interested in pursuring an MBA but had trouble finding job placement data online. Since my friends found the site helpful, I figured I'd make it available to everyone else looking to pursue an MBA, in hopes that this free resource helps other prospective MBA students. If I can help in anyway, email me directly at
+              <a
+                href="mailto:thebschoolreport@gmail.com"
+              >thebschoolreport@gmail.com</a>. Cheers!
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
@@ -21,5 +25,9 @@ export default {};
 <style scoped>
 .footer {
   margin-top: 30px;
+}
+
+.avatar {
+  margin-bottom: 5px;
 }
 </style>
