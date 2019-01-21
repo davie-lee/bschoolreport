@@ -4,36 +4,36 @@
     <!-- Charts -->
     <div class="container">
       <div class="columns">
-        <Industry collegeref="kenanflagler"/>
-        <IndustryPercent collegeref="kenanflagler"/>
+        <Industry collegeref="keenanflagler"/>
+        <IndustryPercent collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <Function collegeref="kenanflagler"/>
-        <FunctionPercent collegeref="kenanflagler"/>
+        <Function collegeref="keenanflagler"/>
+        <FunctionPercent collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <FinanceBreakdown collegeref="kenanflagler"/>
-        <JobLocation collegeref="kenanflagler"/>
+        <FinanceBreakdown collegeref="keenanflagler"/>
+        <JobLocation collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <Employment collegeref="kenanflagler"/>
-        <MajorEmployer collegeref="kenanflagler"/>
+        <Employment collegeref="keenanflagler"/>
+        <MajorEmployer collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <Profile collegeref="kenanflagler"/>
-        <Women collegeref="kenanflagler"/>
+        <Profile collegeref="keenanflagler"/>
+        <Women collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <AverageAge collegeref="kenanflagler"/>
-        <AverageGMAT collegeref="kenanflagler"/>
+        <AverageAge collegeref="keenanflagler"/>
+        <AverageGMAT collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <AvgWorkWE collegeref="kenanflagler"/>
-        <AverageGPA collegeref="kenanflagler"/>
+        <AvgWorkWE collegeref="keenanflagler"/>
+        <AverageGPA collegeref="keenanflagler"/>
       </div>
       <div class="columns">
-        <InternationalStudents collegeref="kenanflagler"/>
-        <Countries collegeref="kenanflagler"/>
+        <InternationalStudents collegeref="keenanflagler"/>
+        <Countries collegeref="keenanflagler"/>
       </div>
     </div>
   </div>
