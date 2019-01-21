@@ -36,6 +36,9 @@
     <router-link :to="{ name: 'harvard' }">
       <a class="button is-small is-rounded">Harvard</a>
     </router-link>
+    <router-link :to="{ name: 'insead' }">
+      <a class="button is-small is-rounded">Insead</a>
+    </router-link>
     <router-link :to="{ name: 'ivey' }">
       <a class="button is-small is-rounded">Ivey</a>
     </router-link>

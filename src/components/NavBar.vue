@@ -2,7 +2,7 @@
   <div id="nav">
     <nav class="navbar is-transparent">
       <div class="navbar-brand">
-        <router-link :to="{ name: 'home' }">
+        <router-link :to="{ name: 'harvard' }">
           <a class="navbar-item" href="/">
             <img src="@/assets/bschool_logo.png">
           </a>

@@ -42,6 +42,7 @@ import Tuck from "./views/Tuck.vue";
 
 // International Schools
 import LondonBusinessSchool from "./views/LondonBusinessSchool.vue";
+import Insead from "./views/Insead.vue";
 import Rotman from "./views/Rotman.vue";
 import Ivey from "./views/Ivey.vue";
 
@@ -269,6 +270,12 @@ const router = new Router({
       path: "/ivey",
       name: "ivey",
       component: Ivey,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: "/insead",
+      name: "insead",
+      component: Insead,
       meta: { requiresAuth: true }
     }
   ]
