@@ -78,8 +78,7 @@ const router = new Router({
     {
       path: "/wharton",
       name: "wharton",
-      component: Wharton,
-      meta: { requiresAuth: true }
+      component: Wharton
     },
     {
       path: "/stanford",
@@ -89,194 +88,162 @@ const router = new Router({
     {
       path: "/sloan",
       name: "sloan",
-      component: Sloan,
-      meta: { requiresAuth: true }
+      component: Sloan
     },
     {
       path: "/kellogg",
       name: "kellogg",
-      component: Kellogg,
-      meta: { requiresAuth: true }
+      component: Kellogg
     },
     {
       path: "/columbia",
       name: "columbia",
-      component: Columbia,
-      meta: { requiresAuth: true }
+      component: Columbia
     },
     {
       path: "/booth",
       name: "booth",
-      component: Booth,
-      meta: { requiresAuth: true }
+      component: Booth
     },
     {
       path: "/yale",
       name: "yale",
-      component: Yale,
-      meta: { requiresAuth: true }
+      component: Yale
     },
     {
       path: "/anderson",
       name: "anderson",
-      component: Anderson,
-      meta: { requiresAuth: true }
+      component: Anderson
     },
     {
       path: "/carey",
       name: "carey",
-      component: Carey,
-      meta: { requiresAuth: true }
+      component: Carey
     },
     {
       path: "/carlson",
       name: "carlson",
-      component: Carlson,
-      meta: { requiresAuth: true }
+      component: Carlson
     },
     {
       path: "/darden",
       name: "darden",
-      component: Darden,
-      meta: { requiresAuth: true }
+      component: Darden
     },
     {
       path: "/fisher",
       name: "fisher",
-      component: Fisher,
-      meta: { requiresAuth: true }
+      component: Fisher
     },
     {
       path: "/foster",
       name: "foster",
-      component: Foster,
-      meta: { requiresAuth: true }
+      component: Foster
     },
     {
       path: "/fuqua",
       name: "fuqua",
-      component: Fuqua,
-      meta: { requiresAuth: true }
+      component: Fuqua
     },
     {
       path: "/goizueta",
       name: "goizueta",
-      component: Goizueta,
-      meta: { requiresAuth: true }
+      component: Goizueta
     },
     {
       path: "/haas",
       name: "haas",
-      component: Haas,
-      meta: { requiresAuth: true }
+      component: Haas
     },
     {
       path: "/johnson",
       name: "johnson",
-      component: Johnson,
-      meta: { requiresAuth: true }
+      component: Johnson
     },
     {
       path: "/jones",
       name: "jones",
-      component: Jones,
-      meta: { requiresAuth: true }
+      component: Jones
     },
     {
       path: "/kelley",
       name: "kelley",
-      component: Kelley,
-      meta: { requiresAuth: true }
+      component: Kelley
     },
     {
       path: "/kenan-flagler",
       name: "kenanflagler",
-      component: KenanFlagler,
-      meta: { requiresAuth: true }
+      component: KenanFlagler
     },
     {
       path: "/marshall",
       name: "marshall",
-      component: Marshall,
-      meta: { requiresAuth: true }
+      component: Marshall
     },
     {
       path: "/mccombs",
       name: "mccombs",
-      component: McCombs,
-      meta: { requiresAuth: true }
+      component: McCombs
     },
     {
       path: "/mcdonough",
       name: "mcdonough",
-      component: McDonough,
-      meta: { requiresAuth: true }
+      component: McDonough
     },
     {
       path: "/olin",
       name: "olin",
-      component: Olin,
-      meta: { requiresAuth: true }
+      component: Olin
     },
     {
       path: "/owen",
       name: "owen",
-      component: Owen,
-      meta: { requiresAuth: true }
+      component: Owen
     },
     {
       path: "/ross",
       name: "ross",
-      component: Ross,
-      meta: { requiresAuth: true }
+      component: Ross
     },
     {
       path: "/scheller",
       name: "scheller",
-      component: Scheller,
-      meta: { requiresAuth: true }
+      component: Scheller
     },
     {
       path: "/stern",
       name: "stern",
-      component: Stern,
-      meta: { requiresAuth: true }
+      component: Stern
     },
     {
       path: "/tepper",
       name: "tepper",
-      component: Tepper,
-      meta: { requiresAuth: true }
+      component: Tepper
     },
     {
       path: "/tuck",
       name: "tuck",
-      component: Tuck,
-      meta: { requiresAuth: true }
+      component: Tuck
     },
     {
       path: "/london-business-school",
       name: "lbs",
-      component: LondonBusinessSchool,
-      meta: { requiresAuth: true }
+      component: LondonBusinessSchool
     },
     {
       path: "/rotman",
       name: "rotman",
-      component: Rotman,
-      meta: { requiresAuth: true }
+      component: Rotman
     },
     {
       path: "/ivey",
       name: "ivey",
-      component: Ivey,
-      meta: { requiresAuth: true }
+      component: Ivey
     },
     {
       path: "/insead",
       name: "insead",
-      component: Insead,
-      meta: { requiresAuth: true }
+      component: Insead
     }
   ]
 });
