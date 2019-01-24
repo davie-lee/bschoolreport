@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - The University of Texas Austin, McCombs School of Business"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">The University of Texas Austin, McCombs School of Business</h1>
       <div class="columns">
         <Industry collegeref="mccombs"/>
         <IndustryPercent collegeref="mccombs"/>

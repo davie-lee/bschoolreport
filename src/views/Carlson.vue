@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - University of Minnesota, Carlson School of Management"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">University of Minnesota, Carlson School of Management</h1>
       <div class="columns">
         <Industry collegeref="carlson"/>
         <IndustryPercent collegeref="carlson"/>

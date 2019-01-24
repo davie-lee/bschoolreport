@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - Indiana University, Kelley School of Business"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">Indiana University, Kelley School of Business</h1>
       <div class="columns">
         <Industry collegeref="kelley"/>
         <IndustryPercent collegeref="kelley"/>

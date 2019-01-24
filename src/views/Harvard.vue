@@ -1,5 +1,9 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - Harvard Business School"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">

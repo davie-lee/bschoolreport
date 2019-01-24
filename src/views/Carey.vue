@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - John Hopkins Carey Business School"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">John Hopkins Carey Business School</h1>
       <div class="columns">
         <Industry collegeref="carey"/>
         <IndustryPercent collegeref="carey"/>

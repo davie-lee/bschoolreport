@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <vue-headful title="MBA Job Reports" description="Free resource for prospective MBA students"/>
     <section class="hero is-white has-text-center">
       <NavBar/>
     </section>

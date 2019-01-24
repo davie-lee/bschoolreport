@@ -5,7 +5,7 @@ import store from "./store";
 // Authentication & Main Views
 import Login from "./views/auth/Login.vue";
 import Signup from "./views/auth/Signup.vue";
-//import Home from "./views/Home.vue";
+import Home from "./views/Home.vue";
 
 // US Schools
 import Harvard from "./views/Harvard.vue";
@@ -64,16 +64,15 @@ const router = new Router({
       name: "signup",
       component: Signup
     },
-    //{
-    //  path: "/",
-    //  name: "home",
-    //  component: Home
-    //},
     {
       path: "/",
+      name: "home",
+      component: Home
+    },
+    {
+      path: "/harvard",
       name: "harvard",
-      component: Harvard,
-      alias: "/harvard"
+      component: Harvard
     },
     {
       path: "/wharton",

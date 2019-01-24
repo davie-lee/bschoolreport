@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - Georgia Tech, Scheller College of Business"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">Georgia Tech, Scheller College of Business</h1>
       <div class="columns">
         <Industry collegeref="scheller"/>
         <IndustryPercent collegeref="scheller"/>

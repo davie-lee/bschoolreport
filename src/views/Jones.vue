@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - Rice University, Jones Graduate School of Business"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">Rice University, Jones Graduate School of Business</h1>
       <div class="columns">
         <Industry collegeref="jones"/>
         <IndustryPercent collegeref="jones"/>

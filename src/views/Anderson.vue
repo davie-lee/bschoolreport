@@ -1,8 +1,13 @@
 <template>
   <div>
+    <vue-headful
+      title="MBA Employment Reports - UCLA Anderson School of Management"
+      description="Free resource for prospective MBA students"
+    />
     <Selector/>
     <!-- Charts -->
     <div class="container">
+      <h1 class="title is-4">UCLA Anderson School of Management</h1>
       <div class="columns">
         <Industry collegeref="anderson"/>
         <IndustryPercent collegeref="anderson"/>

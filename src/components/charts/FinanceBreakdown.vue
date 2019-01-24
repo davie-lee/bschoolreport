@@ -26,7 +26,7 @@ export default {
           type: "bar"
         },
         title: {
-          text: "2018 Job Acceptances for Finance"
+          text: "Job Acceptances for Finance"
         },
         subtitle: {
           text: ""
