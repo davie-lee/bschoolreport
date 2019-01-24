@@ -16,7 +16,8 @@ Vue.use(InstantSearch);
 
 // Google Analytics
 Vue.use(VueAnalytics, {
-  id: "UA-133105603-1"
+  id: "UA-133105603-1",
+  router
 });
 
 new Vue({
