@@ -106,11 +106,11 @@
       <a class="button is-small is-rounded">Yale</a>
     </router-link>
     <div class="note">
-      <b>Note</b>: If a chart is blank or says null, it indicates we couldn't find the data easily. If you'd like to help find the data, please contribute to our community
+      <b>Note</b>: If a chart is blank, it indicates we couldn't find the employment report easily. If you'd like to help find that data, please feel free to add any employment reports you have to our
       <a
-        href="https://docs.google.com/spreadsheets/d/1t8F4GpEQUZ38cASm80WsmF0mYGRfsuu0v0Q7NaHmsp8/edit?usp=sharing"
+        href="https://drive.google.com/drive/folders/1aQqcnnqHI1m83PLFqUG90XDO89BMqs_E?usp=sharing"
         target="new"
-      >here</a>.
+      >google drive</a>.
     </div>
   </div>
 </template>

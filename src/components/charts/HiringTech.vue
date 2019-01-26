@@ -2,7 +2,7 @@
   <div class="column is-6">
     <div class="card">
       <div class="content">
-        <vue-highcharts v-if="isDataReady" :options="HiringConsultingChart" ref="areaCharts"></vue-highcharts>
+        <vue-highcharts v-if="isDataReady" :options="HiringTechChart" ref="areaCharts"></vue-highcharts>
       </div>
     </div>
   </div>
@@ -20,36 +20,35 @@ export default {
   data() {
     return {
       isDataReady: false,
-      HiringConsultingChart: {
+      HiringTechChart: {
         chart: {
-          height: 300,
-          type: "column"
+          height: 700,
+          type: "bar"
         },
         title: {
-          text: "MBA Hiring for Technology"
+          text: "MBA Placement for Technology"
         },
         subtitle: {
           text: ""
         },
         xAxis: {
           categories: [],
-          tickmarkPlacement: "on",
           title: {
-            enabled: true,
-            text: "% of Respondents",
-            align: "high"
+            text: null
           }
         },
         yAxis: {
+          min: 0,
           title: {
-            enabled: false
+            text: "Percentage (%)",
+            align: "high"
           }
         },
         tooltip: {
-          split: true
+          valueSuffix: "%"
         },
         plotOptions: {
-          column: {
+          bar: {
             dataLabels: {
               enabled: true,
               format: "{point.y}%",
@@ -67,7 +66,7 @@ export default {
         },
         series: [
           {
-            name: "Hiring",
+            name: "2018",
             color: "#54a0ff",
             data: []
           }
@@ -76,27 +75,26 @@ export default {
     };
   },
   mounted() {
-    this.getHiringConsultingData();
+    this.getHiringTechData();
   },
   methods: {
-    getHiringConsultingData: function() {
+    getHiringTechData: function() {
       var vm = this;
       vm.isDataReady = false;
-      var dbRef = firebase.database().ref("gmac/" + this.collegeref);
+      var dbRef = firebase.database().ref("placement_tech/");
 
       dbRef.once("value").then(function(snapshot) {
+        let year = snapshot.child("2018/");
         let itr = 0;
-        snapshot.forEach(function(childSnapshot) {
-          var key = childSnapshot.key; // every year
-
-          if (key != "source") {
-            var totalData = childSnapshot.child("Technology").val();
-            vm.$set(vm.HiringConsultingChart.xAxis.categories, itr, key);
-            vm.$set(vm.HiringConsultingChart.series[0].data, itr, totalData);
-            itr++;
-          }
+        year.forEach(function(childSnapshot) {
+          var key = childSnapshot.key;
+          var childData = childSnapshot.val();
+          vm.$set(vm.HiringTechChart.xAxis.categories, itr, key);
+          vm.$set(vm.HiringTechChart.series[0].data, itr, childData);
+          itr++;
         });
-        vm.HiringConsultingChart.subtitle.text =
+
+        vm.HiringTechChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
         vm.isDataReady = true;
       });

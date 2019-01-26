@@ -22,34 +22,33 @@ export default {
       isDataReady: false,
       HiringConsultingChart: {
         chart: {
-          height: 300,
-          type: "column"
+          height: 700,
+          type: "bar"
         },
         title: {
-          text: "MBA Hiring for Consulting"
+          text: "MBA Placement for Consulting"
         },
         subtitle: {
           text: ""
         },
         xAxis: {
           categories: [],
-          tickmarkPlacement: "on",
           title: {
-            enabled: true,
-            text: "% of Respondents",
-            align: "high"
+            text: null
           }
         },
         yAxis: {
+          min: 0,
           title: {
-            enabled: false
+            text: "Percentage (%)",
+            align: "high"
           }
         },
         tooltip: {
-          split: true
+          valueSuffix: "%"
         },
         plotOptions: {
-          column: {
+          bar: {
             dataLabels: {
               enabled: true,
               format: "{point.y}%",
@@ -67,7 +66,7 @@ export default {
         },
         series: [
           {
-            name: "Hiring",
+            name: "2018",
             color: "#54a0ff",
             data: []
           }
@@ -82,20 +81,19 @@ export default {
     getHiringConsultingData: function() {
       var vm = this;
       vm.isDataReady = false;
-      var dbRef = firebase.database().ref("gmac/" + this.collegeref);
+      var dbRef = firebase.database().ref("placement_consulting/");
 
       dbRef.once("value").then(function(snapshot) {
+        let year = snapshot.child("2018/");
         let itr = 0;
-        snapshot.forEach(function(childSnapshot) {
-          var key = childSnapshot.key; // every year
-
-          if (key != "source") {
-            var totalData = childSnapshot.child("Consulting").val();
-            vm.$set(vm.HiringConsultingChart.xAxis.categories, itr, key);
-            vm.$set(vm.HiringConsultingChart.series[0].data, itr, totalData);
-            itr++;
-          }
+        year.forEach(function(childSnapshot) {
+          var key = childSnapshot.key;
+          var childData = childSnapshot.val();
+          vm.$set(vm.HiringConsultingChart.xAxis.categories, itr, key);
+          vm.$set(vm.HiringConsultingChart.series[0].data, itr, childData);
+          itr++;
         });
+
         vm.HiringConsultingChart.subtitle.text =
           "Source: " + snapshot.child("source").val();
         vm.isDataReady = true;
